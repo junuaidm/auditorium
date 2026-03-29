@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏛️ Auditorium Trade Centre - Event Venue Website
 
-## Getting Started
+A modern, responsive event venue booking website built with **Next.js**, **React**, **TypeScript**, and **Tailwind CSS**. Designed to showcase a premium event space and facilitate event bookings.
 
-First, run the development server:
+## 🌟 Features (Phase 1)
+
+✅ Responsive hero section with CTAs  
+✅ Event type showcase (6 categories)  
+✅ Amenities section with icons  
+✅ Gallery page  
+✅ Events calendar  
+✅ Floor plan viewer  
+✅ Contact page with form  
+✅ About & Services pages  
+✅ Mobile responsive design  
+✅ GitHub Pages ready
+
+## 🚀 Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view in browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+├── page.tsx              # Homepage
+├── about/page.tsx        # About page
+├── services/page.tsx     # Services
+├── gallery/page.tsx      # Gallery
+├── events/page.tsx       # Events
+├── floor-plan/page.tsx   # Floor plan
+├── contact/page.tsx      # Contact
+└── layout.tsx            # Root layout
 
-## Learn More
+components/
+├── Header.tsx            # Navigation
+├── Footer.tsx            # Footer
+├── Hero.tsx              # Hero section
+├── EventTypeCard.tsx     # Event card
+└── AmenityCard.tsx       # Amenity card
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Next.js 16+** - React framework
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **React Icons** - Icon library
+- **GitHub Pages** - Hosting
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🌐 Deploy to GitHub Pages
 
-## Deploy on Vercel
+1. Push to GitHub with `main` branch
+2. Go to Settings → Pages → GitHub Actions
+3. GitHub Actions will auto-build & deploy
+4. Site live at: `https://yourusername.github.io/auditorium`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ✅ Phase 1 Status
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All Phase 1 tasks completed:
+
+- ✅ Project setup with Next.js + Tailwind
+- ✅ Folder structure & components
+- ✅ All pages created & functional
+- ✅ Responsive design verified
+- ✅ Static export configured
+- ✅ GitHub Actions workflow ready
+- ✅ Build passes without errors
+
+## 📋 Phase 2 (Coming Soon)
+
+- Backend API integration
+- Database setup
+- Email notifications
+- Booking system
+
+## 📞 Contact
+
+Email: info@auditorium.com  
+Phone: +91 94479 80123
+
+---
+
+**Status**: Ready for Deployment  
+**Last Updated**: March 29, 2026
