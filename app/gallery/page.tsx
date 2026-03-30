@@ -1,13 +1,45 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function Gallery() {
   const images = [
-    { id: 1, title: 'Conference Hall' },
-    { id: 2, title: 'Grand Ballroom' },
-    { id: 3, title: 'Exhibition Area' },
-    { id: 4, title: 'Dining Hall' },
-    { id: 5, title: 'Outdoor Venue' },
-    { id: 6, title: 'Green Room' },
+    {
+      id: 1,
+      title: 'Conference Hall',
+      src: '/images/gallery/conference-hall.jpeg',
+      category: 'Business',
+    },
+    {
+      id: 2,
+      title: 'Grand Ballroom',
+      src: '/images/gallery/grand-ballroom.jpeg',
+      category: 'Weddings',
+    },
+    {
+      id: 3,
+      title: 'Exhibition Area',
+      src: '/images/gallery/exhibition-area.jpeg',
+      category: 'Trade',
+    },
+    {
+      id: 4,
+      title: 'Dining Hall',
+      src: '/images/gallery/dining-hall.jpeg',
+      category: 'Catering',
+    },
+    {
+      id: 5,
+      title: 'Outdoor Venue',
+      src: '/images/gallery/outdoor-venue.jpeg',
+      category: 'Events',
+    },
+    {
+      id: 6,
+      title: 'Green Room',
+      src: '/images/gallery/green-room.jpg',
+      category: 'Hospitality',
+    },
   ];
 
   return (
@@ -23,11 +55,18 @@ export default function Gallery() {
         {images.map((image) => (
           <div
             key={image.id}
-            className='bg-gray-200 rounded-lg h-64 flex items-center justify-center hover:shadow-lg transition duration-300'
+            className='group relative h-64 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300'
           >
-            <div className='text-center'>
-              <p className='text-gray-600 font-semibold'>{image.title}</p>
-              <p className='text-gray-500 text-sm mt-2'>[Image placeholder]</p>
+            <Image
+              src={image.src}
+              alt={image.title}
+              fill
+              className='object-cover group-hover:scale-105 transition duration-300'
+            />
+            <div className='absolute inset-0 bg-black/0 group-hover:bg-black/40 transition'></div>
+            <div className='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4'>
+              <p className='text-white font-semibold'>{image.title}</p>
+              <p className='text-amber-400 text-sm'>{image.category}</p>
             </div>
           </div>
         ))}

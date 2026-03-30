@@ -1,11 +1,11 @@
-# 🏛️ Auditorium Trade Centre - Event Venue Website
+# 🏛️ Nova Auditorium - Event Venue Website
 
-A modern, responsive event venue booking website built with **Next.js**, **React**, **TypeScript**, and **Tailwind CSS**. Designed to showcase a premium event space and facilitate event bookings.
+A modern, responsive event venue booking website built with **Next.js**, **React**, **TypeScript**, and **Tailwind CSS**. Designed to showcase Nova Auditorium - a premier event space in Kozhikode, Kerala.
 
 ## 🌟 Features (Phase 1)
 
 ✅ Responsive hero section with CTAs  
-✅ Event type showcase (6 categories)  
+✅ Event type showcase (9 categories)  
 ✅ Amenities section with icons  
 ✅ Gallery page  
 ✅ Events calendar  

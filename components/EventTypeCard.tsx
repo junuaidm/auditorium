@@ -1,6 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 interface EventTypeCardProps {
@@ -8,6 +9,7 @@ interface EventTypeCardProps {
   description: string;
   icon: ReactNode;
   color: string;
+  image?: string;
 }
 
 export default function EventTypeCard({
@@ -15,11 +17,25 @@ export default function EventTypeCard({
   description,
   icon,
   color,
+  image,
 }: EventTypeCardProps) {
   return (
     <div
-      className={`bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 overflow-hidden border-l-4 ${color}`}
+      className={`bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 overflow-hidden border-l-4 group ${color}`}
     >
+      {/* Image */}
+      {image && (
+        <div className='relative h-48 w-full bg-gray-200 overflow-hidden'>
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className='object-cover group-hover:scale-105 transition duration-300'
+          />
+        </div>
+      )}
+
+      {/* Content */}
       <div className='p-6'>
         <div className={`text-5xl mb-4 ${color.replace('border', 'text')}`}>
           {icon}

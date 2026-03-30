@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function Events() {
   const upcomingEvents = [
     {
@@ -8,6 +10,7 @@ export default function Events() {
       date: 'April 15, 2026',
       type: 'Conference',
       time: '9:00 AM - 5:00 PM',
+      image: '/images/events/tech-conference.jpeg',
     },
     {
       id: 2,
@@ -15,6 +18,7 @@ export default function Events() {
       date: 'May 10, 2026',
       type: 'Exhibition',
       time: '10:00 AM - 6:00 PM',
+      image: '/images/events/trade-expo.jpeg',
     },
     {
       id: 3,
@@ -22,6 +26,7 @@ export default function Events() {
       date: 'June 20, 2026',
       type: 'Entertainment',
       time: '6:00 PM - 11:00 PM',
+      image: '/images/events/entertainment-gala.jpeg',
     },
     {
       id: 4,
@@ -29,6 +34,7 @@ export default function Events() {
       date: 'July 5, 2026',
       type: 'Sports',
       time: '2:00 PM - 9:00 PM',
+      image: '/images/events/sports-championship.jpeg',
     },
   ];
 
@@ -41,29 +47,58 @@ export default function Events() {
         View upcoming events and book your participation
       </p>
 
-      <div className='grid gap-6 md:grid-cols-2'>
+      <div className='grid gap-8 md:grid-cols-2'>
         {upcomingEvents.map((event) => (
           <div
             key={event.id}
-            className='bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition'
+            className='group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300'
           >
-            <div className='flex items-start justify-between mb-4'>
-              <div>
-                <h3 className='text-xl font-bold text-gray-900'>
-                  {event.title}
-                </h3>
-                <p className='text-amber-600 font-semibold mt-1'>
-                  {event.type}
-                </p>
-              </div>
+            {/* Event Image */}
+            <div className='relative h-48 w-full bg-gray-200 overflow-hidden'>
+              <Image
+                src={event.image}
+                alt={event.title}
+                fill
+                className='object-cover group-hover:scale-105 transition duration-300'
+              />
             </div>
-            <p className='text-gray-600 mb-2'>📅 {event.date}</p>
-            <p className='text-gray-600 mb-4'>🕐 {event.time}</p>
-            <button className='bg-amber-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-amber-700 transition'>
-              Learn More
-            </button>
+
+            {/* Event Details */}
+            <div className='p-6'>
+              <div className='flex items-start justify-between mb-4'>
+                <div>
+                  <h3 className='text-xl font-bold text-gray-900'>
+                    {event.title}
+                  </h3>
+                  <p className='text-amber-600 font-semibold mt-1'>
+                    {event.type}
+                  </p>
+                </div>
+              </div>
+              <p className='text-gray-600 mb-2'>📅 {event.date}</p>
+              <p className='text-gray-600 mb-4'>🕐 {event.time}</p>
+              <button className='w-full bg-amber-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-amber-700 transition'>
+                Learn More
+              </button>
+            </div>
           </div>
         ))}
+      </div>
+
+      {/* Info Section */}
+      <div className='mt-16 bg-amber-50 p-8 rounded-lg'>
+        <h2 className='text-2xl font-bold text-gray-900 mb-4'>
+          Upcoming Events Highlights
+        </h2>
+        <p className='text-gray-600 mb-4'>
+          Join us for a variety of events throughout the year. Whether you're
+          looking for business conferences, entertainment experiences, or
+          championship competitions, we have something special planned for you.
+        </p>
+        <p className='text-gray-600'>
+          Contact us to book your participation or inquire about hosting your
+          own event at our state-of-the-art venue.
+        </p>
       </div>
     </div>
   );

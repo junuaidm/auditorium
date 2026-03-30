@@ -25,9 +25,9 @@ export default function Header() {
         {/* Logo */}
         <Link
           href='/'
-          className='text-2xl font-bold text-amber-700'
+          className='text-2xl font-bold text-blue-700'
         >
-          🏛️ Auditorium
+          🏛️ Nova Auditorium
         </Link>
 
         {/* Desktop Menu */}

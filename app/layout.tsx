@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Auditorium Trade Centre - Event Venue Booking',
+  title: 'Nova Auditorium - Event Venue Booking',
   description:
-    'The largest trade centre in South India. Host your events, conferences, exhibitions, and celebrations at our state-of-the-art venue.',
+    'Nova Auditorium in Kozhikode offers premium event spaces for weddings, corporate events, conferences, and celebrations. Book your perfect venue today.',
   keywords:
-    'event venue, conference hall, trade centre, auditorium, event booking',
+    'event venue, auditorium, wedding halls, conference room, celebratory events, Kozhikode',
 };
 
 export default function RootLayout({

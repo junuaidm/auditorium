@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Hero from '@/components/Hero';
 import EventTypeCard from '@/components/EventTypeCard';
 import AmenityCard from '@/components/AmenityCard';
@@ -14,46 +15,76 @@ import {
 
 const eventTypes = [
   {
-    title: 'Business Conferences',
+    title: 'Wedding',
     description:
-      'A truly engaging space to inspire your entrepreneurial spirit and host professional gatherings.',
-    icon: '🤝',
-    color: 'border-blue-500',
-  },
-  {
-    title: 'Entertainment Events',
-    description:
-      'Sweep your audience off their feet with our elegant entertainment space and world-class amenities.',
-    icon: '🎭',
-    color: 'border-purple-500',
-  },
-  {
-    title: 'Sports Events',
-    description:
-      'Enjoy the thrills, movements & spirit of sporting events in all their glory.',
-    icon: '⚽',
-    color: 'border-green-500',
-  },
-  {
-    title: 'Motor Shows',
-    description:
-      'Create an exhilarating experience for motor shows & attract your target audience.',
-    icon: '🏎️',
-    color: 'border-red-500',
-  },
-  {
-    title: 'Trade Exhibitions',
-    description:
-      'Extensive commercial space designed to increase the footfall of your trade events.',
-    icon: '🏪',
-    color: 'border-yellow-500',
-  },
-  {
-    title: 'Wedding Functions',
-    description:
-      'Elevate your wedding celebrations to the next level & make memories of a lifetime.',
+      'Elevate your wedding celebrations to the next level & make memories of a lifetime with our elegant spaces.',
     icon: '💒',
     color: 'border-pink-500',
+    image: '/images/events/wedding.jpeg',
+  },
+  {
+    title: 'Engagement Ceremony',
+    description:
+      'Celebrate your engagement with grace and elegance at our beautifully designed venue.',
+    icon: '💍',
+    color: 'border-rose-500',
+    image: '/images/events/engagement-ceremony.jpeg',
+  },
+  {
+    title: 'Business Meetings',
+    description:
+      'Professional spaces designed for executive meetings, boardroom sessions, and corporate gatherings.',
+    icon: '🤝',
+    color: 'border-blue-500',
+    image: '/images/events/business-meetings.jpeg',
+  },
+  {
+    title: 'Family Meetings',
+    description:
+      'Comfortable and welcoming spaces for family gatherings, reunions, and get-togethers.',
+    icon: '👨‍👩‍👧‍👦',
+    color: 'border-green-500',
+    image: '/images/events/family-meetings.jpeg',
+  },
+  {
+    title: 'Corporate Events',
+    description:
+      'Host impressive corporate events, product launches, and team celebrations with full amenities.',
+    icon: '🏢',
+    color: 'border-indigo-500',
+    image: '/images/events/corporate-events.jpeg',
+  },
+  {
+    title: 'Conference',
+    description:
+      'A truly engaging space to inspire your entrepreneurial spirit and host professional conferences.',
+    icon: '🎤',
+    color: 'border-cyan-500',
+    image: '/images/events/conference.jpeg',
+  },
+  {
+    title: 'Royal Get Together',
+    description:
+      'Exclusive and luxurious spaces for premium events and special gatherings of high distinction.',
+    icon: '👑',
+    color: 'border-yellow-500',
+    image: '/images/events/royal-get-together.jpeg',
+  },
+  {
+    title: 'Birthday Parties',
+    description:
+      'Create unforgettable birthday celebrations with our versatile event spaces and full services.',
+    icon: '🎉',
+    color: 'border-purple-500',
+    image: '/images/events/birthday-parties.jpeg',
+  },
+  {
+    title: 'School & College Day',
+    description:
+      'Perfect venue for annual days, farewell functions, and educational institution events.',
+    icon: '🎓',
+    color: 'border-orange-500',
+    image: '/images/events/school-college-day.jpeg',
   },
 ];
 
@@ -95,14 +126,15 @@ export default function Home() {
         <div className='max-w-7xl mx-auto px-4'>
           <div className='text-center mb-12'>
             <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-4'>
-              Unrivaled Event Spaces Designed for Business Events
+              All Types of Functions & Events
             </h2>
             <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-              Host any type of event with our versatile and well-equipped venue
+              Host any type of occasion with our versatile and well-equipped
+              venue
             </p>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8'>
             {eventTypes.map((event, index) => (
               <EventTypeCard
                 key={index}
@@ -110,6 +142,7 @@ export default function Home() {
                 description={event.description}
                 icon={event.icon}
                 color={event.color}
+                image={event.image}
               />
             ))}
           </div>
@@ -163,18 +196,26 @@ export default function Home() {
           <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-12 text-center'>
             Our Venue Layout
           </h2>
-          <div className='bg-white rounded-lg shadow-lg p-8 text-center'>
-            <div className='bg-gray-200 rounded-lg h-96 flex items-center justify-center'>
-              <div className='text-center'>
-                <p className='text-gray-600 text-xl mb-4'>
-                  70,000+ Square Feet of Premium Event Space
-                </p>
-                <a
-                  href='/floor-plan'
-                  className='inline-block bg-amber-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-700 transition'
-                >
-                  View Interactive Floor Plan
-                </a>
+          <div className='bg-white rounded-lg shadow-lg overflow-hidden'>
+            <div className='relative w-full h-96 bg-gray-200'>
+              <Image
+                src='/images/venues/venue-preview.jpeg'
+                alt='Venue Layout Preview'
+                fill
+                className='object-cover'
+              />
+              <div className='absolute inset-0 bg-black/20 flex items-center justify-center'>
+                <div className='text-center bg-white/95 p-8 rounded-lg backdrop-blur'>
+                  <p className='text-gray-600 text-xl mb-4'>
+                    70,000+ Square Feet of Premium Event Space
+                  </p>
+                  <a
+                    href='/floor-plan'
+                    className='inline-block bg-amber-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-700 transition'
+                  >
+                    View Interactive Floor Plan
+                  </a>
+                </div>
               </div>
             </div>
           </div>

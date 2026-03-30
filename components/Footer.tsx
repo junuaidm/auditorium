@@ -10,32 +10,34 @@ export default function Footer() {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-8'>
           {/* Location Info */}
           <div>
-            <h3 className='text-xl font-bold text-amber-400 mb-4'>
+            <h3 className='text-xl font-bold text-blue-400 mb-4'>
               Get in Touch
             </h3>
-            <p className='text-gray-300 mb-2'>123 Trade Center Road</p>
-            <p className='text-gray-300 mb-2'>City, State - 123456</p>
+            <p className='text-gray-300 mb-2'>Near Hilite Mall, Palazhi Road</p>
+            <p className='text-gray-300 mb-2'>
+              Palazhi, Kozhikode, Kerala - 673014
+            </p>
             <p className='text-gray-300 mb-2'>
               <a
-                href='tel:+919447980123'
-                className='hover:text-amber-400'
+                href='tel:+919544005916'
+                className='hover:text-blue-400'
               >
-                +91 94479 80123
+                +91 9544005916
               </a>
             </p>
             <p className='text-gray-300'>
               <a
-                href='mailto:info@auditorium.com'
-                className='hover:text-amber-400'
+                href='tel:+919605401313'
+                className='hover:text-blue-400'
               >
-                info@auditorium.com
+                +91 9605401313
               </a>
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className='text-xl font-bold text-amber-400 mb-4'>
+            <h3 className='text-xl font-bold text-blue-400 mb-4'>
               Quick Links
             </h3>
             <ul className='space-y-2'>
@@ -76,9 +78,7 @@ export default function Footer() {
 
           {/* Newsletter & Social */}
           <div>
-            <h3 className='text-xl font-bold text-amber-400 mb-4'>
-              Newsletter
-            </h3>
+            <h3 className='text-xl font-bold text-blue-400 mb-4'>Newsletter</h3>
             <p className='text-gray-300 mb-4'>
               Subscribe for updates and offers
             </p>
@@ -91,7 +91,7 @@ export default function Footer() {
               />
               <button
                 type='submit'
-                className='bg-amber-600 hover:bg-amber-700 px-6 py-2 rounded font-semibold transition'
+                className='bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded font-semibold transition'
               >
                 Sign Up
               </button>
@@ -101,25 +101,25 @@ export default function Footer() {
             <div className='flex gap-4'>
               <a
                 href='#'
-                className='text-gray-300 hover:text-amber-400 text-2xl'
+                className='text-gray-300 hover:text-blue-400 text-2xl'
               >
                 <FaFacebook />
               </a>
               <a
                 href='#'
-                className='text-gray-300 hover:text-amber-400 text-2xl'
+                className='text-gray-300 hover:text-blue-400 text-2xl'
               >
                 <FaInstagram />
               </a>
               <a
                 href='#'
-                className='text-gray-300 hover:text-amber-400 text-2xl'
+                className='text-gray-300 hover:text-blue-400 text-2xl'
               >
                 <FaYoutube />
               </a>
               <a
                 href='#'
-                className='text-gray-300 hover:text-amber-400 text-2xl'
+                className='text-gray-300 hover:text-blue-400 text-2xl'
               >
                 <FaWhatsapp />
               </a>
@@ -129,7 +129,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className='border-t border-gray-700 pt-8 text-center text-gray-400'>
-          <p>&copy; 2026 Auditorium Trade Centre. All rights reserved.</p>
+          <p>&copy; 2026 Nova Auditorium. All rights reserved.</p>
           <p className='mt-2 text-sm'>
             Built with Next.js & hosted on GitHub Pages
           </p>

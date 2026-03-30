@@ -49,7 +49,7 @@ export default function Contact() {
                 name='name'
                 value={formData.name}
                 onChange={handleChange}
-                className='w-full px-6 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-amber-600'
+                className='w-full px-6 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600'
                 required
               />
             </div>
@@ -62,7 +62,7 @@ export default function Contact() {
                 name='email'
                 value={formData.email}
                 onChange={handleChange}
-                className='w-full px-6 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-amber-600'
+                className='w-full px-6 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600'
                 required
               />
             </div>
@@ -75,7 +75,7 @@ export default function Contact() {
                 name='phone'
                 value={formData.phone}
                 onChange={handleChange}
-                className='w-full px-6 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-amber-600'
+                className='w-full px-6 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600'
               />
             </div>
             <div>
@@ -87,13 +87,13 @@ export default function Contact() {
                 value={formData.message}
                 onChange={handleChange}
                 rows={6}
-                className='w-full px-6 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-amber-600'
+                className='w-full px-6 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600'
                 required
               ></textarea>
             </div>
             <button
               type='submit'
-              className='w-full bg-amber-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-amber-700 transition text-lg'
+              className='w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition text-lg'
             >
               Send Message
             </button>
@@ -112,11 +112,9 @@ export default function Contact() {
                   Address
                 </h3>
                 <p className='text-gray-600'>
-                  123 Trade Center Road
+                  Palazhi Road
                   <br />
-                  Sarovaram Bio Park
-                  <br />
-                  City, State - 123456
+                  Kozhikode, Kerala - 673014
                   <br />
                   India
                 </p>
@@ -127,17 +125,17 @@ export default function Contact() {
                 </h3>
                 <p className='text-gray-600'>
                   <a
-                    href='tel:+919447980123'
-                    className='hover:text-amber-600'
+                    href='tel:+919544005916'
+                    className='hover:text-blue-600'
                   >
-                    +91 94479 80123
+                    +91 95440 05916
                   </a>
                   <br />
                   <a
-                    href='tel:+919562848000'
-                    className='hover:text-amber-600'
+                    href='tel:+919605401313'
+                    className='hover:text-blue-600'
                   >
-                    +91 95628 48000
+                    +91 96054 01313
                   </a>
                 </p>
               </div>
@@ -147,10 +145,10 @@ export default function Contact() {
                 </h3>
                 <p className='text-gray-600'>
                   <a
-                    href='mailto:info@auditorium.com'
-                    className='hover:text-amber-600'
+                    href='mailto:info@novaauditorium.com'
+                    className='hover:text-blue-600'
                   >
-                    info@auditorium.com
+                    info@novaauditorium.com
                   </a>
                 </p>
               </div>

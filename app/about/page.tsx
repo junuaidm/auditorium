@@ -7,9 +7,10 @@ export default function About() {
 
       <div className='prose prose-lg max-w-3xl'>
         <p className='text-gray-600 mb-6'>
-          Auditorium Trade Centre is the largest trade and convention centre in
-          South India, offering world-class facilities for business events,
-          exhibitions, and celebrations.
+          Nova Auditorium is a premier event venue in Kozhikode, Kerala,
+          offering world-class facilities for weddings, corporate events,
+          conferences, and celebrations. With spacious halls and modern
+          amenities, we create memorable experiences for every occasion.
         </p>
 
         <h2 className='text-3xl font-bold text-gray-900 mt-8 mb-4'>
